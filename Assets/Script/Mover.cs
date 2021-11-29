@@ -6,12 +6,12 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
 
-    [SerializeField]  float speed=10f;
+    [SerializeField]  float speed=12f;
   
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
