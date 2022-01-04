@@ -10,10 +10,15 @@ public class Scorer : MonoBehaviour
 
    public void OnCollisionEnter(Collision other)
 {
-    Score=Score - minus_scire_on_collision;
+    if((other.gameObject.tag!="Plane")&& (other.gameObject.tag!="Hit"))  //anty plane scorer
+    { 
+        Score=Score - minus_scire_on_collision;
     bumped++;
  Debug.Log("Your Score is now only "+ Score);
  Debug.Log("Your bumped into things this many times "+bumped );
+ }
+
+   
 }
 
 }

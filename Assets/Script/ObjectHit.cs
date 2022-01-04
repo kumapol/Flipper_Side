@@ -7,9 +7,11 @@ public class ObjectHit : MonoBehaviour
  
  
   public  void OnCollisionEnter(Collision other) {
-          
-           GetComponent<MeshRenderer>().material.color=Color.red;
-           StartCoroutine(Uderzenie());
+    if(other.gameObject.tag=="Player"){
+    GetComponent<MeshRenderer>().material.color=Color.red;
+    StartCoroutine(Uderzenie());
+    gameObject.tag="Hit";
+    }
   }
   
 IEnumerator Uderzenie(){
